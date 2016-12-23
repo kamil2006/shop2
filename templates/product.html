@@ -1,0 +1,16 @@
+{% extends 'base.html'}
+
+{% block content %}
+	<meta charset="utf-8">
+	<title>Магазин продуктов</title>
+
+	<h1>Наша продукция</h1>
+
+	<div>
+		<p>{{ product.title }}</p>
+		<p>Описание: {{ product.description }}</p>
+		<p>Цена: {{ product.price }} </p>
+		<img src="{{ product.get_img }}" width="1000">
+	</div>
+
+{% endblock %}

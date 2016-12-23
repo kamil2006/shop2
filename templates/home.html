@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		<h1>Наша продукция</h1>
+	{% for product in products %}
+	<div class="col-md-4">
+		<a href="{% url 'product' product.id %}">{{ product.title }}</a>
+		<p>Цена: {{ product.price }} </p>
+		<img src="{{ product.get_img }}" width="200" height="120">
+		<p>Цена: {{ product.price }}</p>
+		<button class="btn btn-primary">В корзину Ельцина</button>
+	</div>
+	{% endfor %}
+
+{% endblock %}
